@@ -1,6 +1,6 @@
 const spaceList = document.getElementById('space-list');
 
-fetch('https://spacelaunchnow.me/api/3.3.0/launch/upcoming/')
+fetch('https://spacelaunchnow.me/api/3.3.0/launch/upcoming/?limit=200')
 
   .then(res => res.json())
   .then(data => addDataToDOM(data));
