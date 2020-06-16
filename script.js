@@ -1,19 +1,27 @@
 const spaceList = document.getElementById('space-list');
+const upcoming = document.getElementById('upComing');
+const previous = document.getElementById('previous');
 
-fetch('https://spacelaunchnow.me/api/3.3.0/launch/upcoming/?limit=200')
+function getData(launches) {
+  
+    fetch(`https://spacelaunchnow.me/api/3.3.0/launch/${launches}/?limit=200`)
+    .then(res => res.json())
+    .then(data => addDataToDOM(data, launches)); 
+}
 
-  .then(res => res.json())
-  .then(data => addDataToDOM(data));
 
-function addDataToDOM(data) {
-  console.log(data);
+function addDataToDOM(data, launches) {
+  spaceList.innerHTML = '';
   data.results.forEach(item => {
-    console.log(item.name);
     const spaceItem = document.createElement('div');
     spaceItem.classList.add('item-box');
     spaceItem.innerHTML = `
       <span class = 'mission'>Mission: ${item.name}</span>
-      <span class = 'net'>NET: ${item.net}</span>`;
+      <span class = 'net'>${launches === 'upcoming' ? 'NET: ' : ''} ${item.net}</span>`;
     spaceList.appendChild(spaceItem);
   });
 }
+
+// Event Listeners
+upcoming.addEventListener('click', () => getData(launches = 'upcoming'));
+previous.addEventListener('click', () => getData(launches = 'previous'));
