@@ -14,11 +14,36 @@
         <ul>
           <li><a href="#" id = 'upComing'>Upcoming Launches</a></li>
           <li><a href="#" id = 'previous'>Previous Launches</a></li>
+          <li><a href="#" id = 'searchBtn'>Search</a></li>
         </ul>
       </nav>
     </header>
-
+    <div class="selection-heading-div">
+      <h2 class = 'selection-heading' id = 'selection-heading'></h2>
+    </div>
     <div class="space-list" id = 'space-list'></div>
+  </div>
+  <div class="search-window" id="search-window">
+    <form class="search-form" id="search-form">
+      <div class="form-group">
+        <label for="category">Category:</label>
+          <select id="category">
+            <option value="launch">Launches</option>
+            <option value="spacecraft">Spacecraft</option>
+            <option value="astronaut">Astronauts</option>
+            <option value="expedition">Expeditions</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+        <label for="term">Search Term:</label>
+          <input type="text" id = 'term'>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Search" id = 'searchBtn' class = 'searchBtn'>
+      </div>
+    </form>
   </div>
   <script src="script.js"></script>
 </body>
