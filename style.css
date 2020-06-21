@@ -171,25 +171,40 @@ h3.launchName {
 }
 
 /* // Media Queries */
-@media(max-width: 400px) and (min-width: 301px){
+@media(max-width: 600px) and (min-width: 401px){
+
+  .container .navbar ul li a{
+    display: inline-block;
+    padding: 10px 5px;
+    width: 100px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+@media(max-width: 400px){
+
+  body {
+    margin-left: 0;
+  }
   .container {
-    width: 300px;
+    width: 250px;
   }
 
   .container h1 {
     letter-spacing: 5px;
-    font-size: 36px;
+    font-size: 30px;
   }
 
   .container .navbar ul li a{
     display: inline-block;
     padding: 10px 5px;
-    width: 70px;
-    font-size: 0.9rem;
+    width: 50px;
+    font-size: 0.6rem;
     text-align: center;
   }
 
   .search-window {
-    width: 300px;
+    width: 250px;
   }
 }
