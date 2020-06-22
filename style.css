@@ -172,7 +172,7 @@ h3.launchName {
 
 /* // Media Queries */
 @media(max-width: 600px) and (min-width: 401px){
-  
+
   .container h1 {
     letter-spacing: 5px;
     font-size: 30px;
@@ -181,7 +181,7 @@ h3.launchName {
   .container .navbar ul li a{
     display: inline-block;
     padding: 10px 5px;
-    width: 100px;
+    width: 80px;
     font-size: 0.9rem;
     text-align: center;
   }
