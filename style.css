@@ -172,6 +172,11 @@ h3.launchName {
 
 /* // Media Queries */
 @media(max-width: 600px) and (min-width: 401px){
+  
+  .container h1 {
+    letter-spacing: 5px;
+    font-size: 30px;
+  }
 
   .container .navbar ul li a{
     display: inline-block;
